@@ -1,0 +1,14 @@
+#!/bin/bash
+n=1
+while [ $n -lt 6 ]
+do
+echo "WELCOME"
+n=$((n+1))
+done
+#OUTPUT
+#ayisha@ayisha-VirtualBox:~/Desktop/shell$ bash d.sh
+#WELCOME
+#WELCOME
+#WELCOME
+#WELCOME
+#WELCOME
