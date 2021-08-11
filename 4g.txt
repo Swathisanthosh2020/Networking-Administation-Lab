@@ -1,0 +1,15 @@
+g) 
+
+#!/bin/sh
+echo "enter a number:"
+read x
+if [ $x -lt 20 ] && [ $x -gt 10 ]
+then 
+      echo "$x is in between 10 and 20"
+elif [$x -lt 200 ] && [ $x -gt 100 ]
+then
+     echo "$x is in between 200 and 100"
+else
+     echo "error"
+fi
+      
