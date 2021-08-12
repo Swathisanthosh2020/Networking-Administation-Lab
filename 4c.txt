@@ -1,0 +1,16 @@
+#c.write a shell script to create files with the following names:file.txt,123
+#and data.sh(use for loop)
+
+#!/bin/bash
+for name in file.txt 123 data.sh
+do
+touch $name
+echo "$name file created "
+done
+
+
+#output
+#anitta@Anitta:~/Desktop/NetworkLab$ bash c.sh
+#file.txt file created 
+#123 file created 
+#data.sh file created 

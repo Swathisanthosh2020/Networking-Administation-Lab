@@ -1,0 +1,13 @@
+#!/bin/sh
+echo "enter filename with path"
+read filename
+if [ -f "$filename" ]
+then
+     echo "file exists"
+     echo "enter the path of directory for copy the file"
+     read target
+     cp $filename $target
+     echo "file copied successfully"
+else
+     echo "not exit"
+fi
