@@ -1,0 +1,12 @@
+#Write a shell script to print currently logged  in users information and current date and time
+echo "User logged in"
+echo "$(who)"
+echo "Date and Time :  $(date)"
+
+#OUTPUT
+#anagha@anagha-VirtualBox:~/Desktop/shell$ bash j.sh
+#User logged in
+#anagha   :0           2021-08-11 09:16 (:0)
+#Date and Time :  Wed 11 Aug 2021 09:49:45 AM EDT
+
+

@@ -1,0 +1,11 @@
+#Create a constant variable called CONST and make its value always the same throughout the shell script.
+echo "Enter a value to be assigned to CONST varible "
+read con
+readonly CONST=$con
+echo "CONST varible created : $CONST"
+
+#OUTPUT
+#anagha@anagha-VirtualBox:~/Desktop/shell$ bash l.sh
+#Enter a value to be assigned to CONST varible 
+#2
+#CONST varible created : 2

@@ -1,0 +1,43 @@
+#Write a sample shell script to take input a number is between 1-9 from the user , And print the number enter by user by using case statement , Print error message if it is not a number is between 1-9.
+
+
+echo "Enter a Number :"
+read num
+
+case "$num" in
+   "1") echo "Entered number is 1" 
+   ;;
+   "2") echo "Entered  number is 2" 
+   ;;
+   "3") echo "Entered  number is 3" 
+   ;;
+   "4") echo "Entered  number is 4" 
+   ;;
+   "5") echo "Entered  number is 5" 
+   ;;
+   "6") echo "Entered  number is 6" 
+   ;;
+   "7") echo "Entered  number is 7" 
+   ;;
+   "8") echo "Entered  number is 8" 
+   ;;
+   "9") echo "Entered  number is 9" 
+   ;;
+   *)   echo "Error!!"
+   ;;
+esac 
+
+#OUTPUT
+#anagha@anagha-VirtualBox:~/Desktop/shell$ bash h.sh
+#Enter a Number :
+#1
+#Entered number is 1
+#anagha@anagha-VirtualBox:~/Desktop/shell$ bash h.sh
+#Enter a Number :
+#9
+#Entered  number is 9
+#anagha@anagha-VirtualBox:~/Desktop/shell$ bash h.sh
+#Enter a Number :
+#10
+#Error!!
+

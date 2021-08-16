@@ -1,0 +1,19 @@
+#Write a shell script to take a username(login name) as input from user , Print some hello message to the user if it is a correct username .
+echo "Enter username "
+read username
+if [ $username == $(whoami) ];
+then
+echo "Hello"
+else
+echo "Wrong Username"
+fi
+
+#OUTPUT
+#anagha@anagha-VirtualBox:~/Desktop/shell$ bash i.sh
+#Enter username 
+#anagha
+#Hello
+#anagha@anagha-VirtualBox:~/Desktop/shell$ bash i.sh
+#Enter username 
+#anu
+#Wrong Username
