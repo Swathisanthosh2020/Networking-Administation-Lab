@@ -1,0 +1,397 @@
+A
+--------------------------------------
+#!/bin/bash
+#read a number using bash scripting and check whether the number is greaterthan 20 or not using if else statement (try to exicute 3 forms of if else statement)
+echo "enter a number"
+read x
+echo "........if.fi........"
+if [ $x -gt 20 ]
+then
+	echo "$x is greaterthan 20"
+fi
+echo ""
+echo "........if.else.fi......"
+if [ $x -gt 20 ]
+then
+	echo "$x is greaterthan 20"
+else
+	echo "$x is lessthan 20"
+fi
+echo ""
+echo "....if.elif.else.fi........."
+if [ $x -lt 10 ]
+then
+	echo "$x is lessthan 10"
+elif [ $x  -lt 20 && $x -gt 10 ]
+then
+	echo "$x between 10 and 20"
+elif [ $x -lt 30 && $x -gt 20]
+then
+	echo "$x between 20 and 30"
+else
+	echo "greaterthan 30"
+fi
+
+
+
+#output
+#enter a number
+#3
+#........if.fi........
+
+#........if.else.fi......
+#3 is lessthan 20
+
+#....if.elif.else.fi.........
+#3 is lessthan 10
+
+
+
+
+
+B
+---------------------
+#!/bin/bash
+#write a shell script to take integer value value from user and print some message based on a match
+echo "enter first  number"
+read x
+echo "enter second number "
+read y
+if [ $x == $y ]
+then
+	echo "both numbers are same"
+fi
+
+#enter first  number
+#2
+#enter second number 
+#2
+#both numbers are same
+
+
+
+c
+----------------------------
+#!/bin/sh
+#c.write a shell script to create files with the followingnames :file.txt,123,and data.sh(use for loop)
+for name in file.txt 123 data.sh
+do 
+	touch $name
+	echo "$name file is created"
+done
+
+<<COMMENT
+file.txt file is created
+123 file is created
+data.sh file is created
+COMMENT
+
+
+
+D
+-------------------------------
+
+#!/bin/sh
+#d)write a shell to print welcom 5 times on screen using while loop
+a=0
+while [ $a -lt 5 ]
+do
+	echo "welcom"
+	a=$(($a+1))
+done
+
+#output
+
+#welcom
+#welcom
+#welcom
+#welcom
+#welcom
+
+
+
+E
+--------------------------------
+#!/bin/sh
+#write shell script to display number 5 to 15 using until
+a=5
+until [ $a -gt 16 ]
+do
+	echo " $a"
+	a=$(($a+1))
+done
+
+
+<<COMMENT1
+ 5
+ 6
+ 7
+ 8
+ 9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+COMMENT1
+
+
+
+F
+-------------------------------
+#!/bin/sh
+#write a shell script to accept file name check if exits,copy file into another directory
+echo "enter filename with path"
+read filename
+if [ -f "$filename" ]
+then 
+	echo "file exists"
+	echo "enter the path of directory for copy the file"
+	read target
+	cp $filename $target
+	echo "file copied successfuly"
+else
+	echo "not exit"
+fi
+
+<<COMMENT1
+enter filename with path
+/home/noofapc/Desktop/file3
+file exists
+enter the path of directory for copy the file
+/home/noofapc/Desktop/networking_lab
+file coppied successfuly
+COMMENT1
+
+
+
+
+
+g
+-----------
+  
+#!/bin/sh
+#g)write a sample shell script to take input a number from user,check the number is between 10-20,or number is between 100-200
+echo "enter a number:"
+read x
+if [ $x  -lt 20 ] && [ $x -gt 10 ]
+then
+        echo "$x is in between 10 and 20"
+elif [ $x -lt 200 ] && [ $x -gt 100 ]
+then
+        echo "$x is in between 200 and 100"
+else
+        echo "error"
+fi
+
+
+<<COMMENT1
+output
+enter a number:
+12
+12 is in between 10 and 20
+COMMENT1
+
+
+
+
+h
+-------------------
+#!/bin/bash
+#write a sample shell script to take input number isbetween 1-9from the user ,and print the number enter by user by using case statement ,print error messge if it is not a number is between 1-9
+echo "enter a number between 1-9"
+read x
+case $x in
+        1)echo "enterd value is 1";;
+        2)echo "enterd value is 2";; 
+        3)echo "enterd value is 3";;
+	4)echo "enterd value is 4";;
+	5)echo "enterd value is 5";;
+	6)echo "enterd value is 6";;
+	7)echo "enterd value is 7";;
+	8)echo "enterd value is 8";;
+	9)echo "enterd value is 9";;
+        *)echo "enter number is not in the range";;
+esac
+
+#output
+
+#enter a number between 1-9
+#3
+#enterd value is 3
+
+
+
+i
+-----------------------
+
+
+#!/bin/bash
+#i)write a shell script to take a username(login name) as input from user,print some hello message to the user if it is a corrent username
+echo "enter username"
+read y
+if [ $y == $(whoami) ]
+then
+        echo "Hello"
+else
+	echo "not corrent user"
+fi
+
+<<COMMENT
+enter username
+noofapc
+Hello
+noofapc@noofapc-VirtualBox:~/Desktop/networking_lab/EXPERIMENT-04$ ./exp-4-i.sh
+enter username
+aadi
+not corrent user
+COMMENT
+
+
+
+
+
+j
+--------------------
+#!/bin/sh
+#j)write a shell script to print currently logged in users information and current date and time
+echo "logged in user:"
+echo "$(who)"
+echo "current date and time:$(date)"
+
+
+<<COMMENT
+logged in user:
+noofapc  :0           2021-08-16 19:58 (:0)
+current date and time:Monday 16 August 2021 09:44:40 PM IST
+COMMENT
+
+
+
+
+l
+---------------------------
+
+#!/bin/sh
+#l)craete a constant variable called CNT and make its value always the same throughout the shell script
+echo "enter value for CONST variable"
+read constant
+readonly CONST=$constant
+echo "CONST variable created: $CONST"
+
+
+<<COMMENT
+enter value for CONST variable
+3
+CONST variable created: 3
+COMMENT
+
+
+
+m
+-----------------
+#!/bin/sh
+#m)write a shell script to create a file using alias commend filename need to be read as user input,also write alias command to make directory
+echo "name of directory you want to create using alias command:"
+read dname
+alias d="mkdir"
+d "$dname"
+echo "name of file you want to create using alias command:"
+read fname
+alias f="touch"
+f "$fname"
+
+<<COMMENT
+name of directory you want to create using alias command:
+directory1
+name of file you want to create using alias command:
+file1.txt
+COMMENT
+
+
+
+o
+---------------------------
+#!/bin/sh
+#o)write a shell script to see if variable is empty or not
+echo "enter a variable:"
+read v
+echo "enter a empty/not empty variable:"
+if test -z $v
+then
+	echo "empty "
+else 
+	echo "not empty"
+fi
+
+<<COMMENT
+noofapc@noofapc-VirtualBox:~/Desktop/networking_lab/EXPERIMENT-04$ ./exp-4-o.sh
+enter a variable:
+hello
+enter a empty/not empty variable:
+not empty
+noofapc@noofapc-VirtualBox:~/Desktop/networking_lab/EXPERIMENT-04$ ./exp-4-o.sh
+enter a variable:
+enter a empty/not empty variable:
+empty
+COMMENT
+
+
+p
+-------------------
+#!/bin/sh
+#p)write a shell script to read your mark as command line argument and print using positional parameters
+IFS=","
+echo "SUBJECTS"
+echo "--------"
+echo "adbms acn oop  network aos cg adbmslab"
+echo "$@"
+echo "$*"
+
+
+
+<<COMMENT
+noofapc@noofapc-VirtualBox:~/Desktop/networking_lab/EXPERIMENT-04$ ./exp-4-m.sh 20 20 19 20 18 19 20
+SUBJECTS
+--------
+adbms acn oop  network aos cg adbmslab
+20 20 19 20 18 19 20
+20,20,19,20,18,19,20
+COMMENT
+
+
+
+
+s
+-------------------------
+#!/bin/sh
+#s)create a shell script to determine if given name is file or directory
+echo "enter a name(file/directory) with path:"
+read name 
+if [ -f "$name" ]
+then
+	echo "$name is a file"
+elif [ -d "$name" ]
+then
+	echo "$name is a directory"
+else
+	echo "error"
+fi
+
+<<COMMENT
+noofapc@noofapc-VirtualBox:~/Desktop/networking_lab/EXPERIMENT-04$ ./exp-4-r.sh
+enter a name(file/directory) with path:
+/home/noofapc/Desktop/networking_lab
+/home/noofapc/Desktop/networking_lab is a directory
+noofapc@noofapc-VirtualBox:~/Desktop/networking_lab/EXPERIMENT-04$ ./exp-4-r.sh
+enter a name(file/directory) with path:
+/home/noofapc/networking_lab/file3
+error
+noofapc@noofapc-VirtualBox:~/Desktop/networking_lab/EXPERIMENT-04$ ./exp-4-r.sh
+enter a name(file/directory) with path:
+/home/noofapc/Desktop/networking_lab/file3
+/home/noofapc/Desktop/networking_lab/file3 is a file
+COMMENT
+
