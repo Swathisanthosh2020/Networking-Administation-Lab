@@ -17,3 +17,22 @@ createfile "$filename"
 #dirname
 #Name of file to create using alias command:
 #filename
+
+
+
+
+q)
+#Shell Script To Read File Line by Line
+#!/bin/bash
+
+while IFS= read -r line; do
+    echo " $line"
+done < "$1"
+
+#OUTPUT
+#anagha@anagha-VirtualBox:~/Desktop/shell$ bash q.sh file.txt
+# This is line 1
+# This is line 2
+# This is line 3
+# This is line 4
+# This is line 5
