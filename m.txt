@@ -1,0 +1,19 @@
+#!/bin/sh
+#Write a shell script to create a file using alias commend filename need to be read as user input,also write alias command to make directory
+
+echo "Name of directory to create using alias command:"
+read dirname
+alias makefolder="mkdir"
+makefolder "$dirname"
+echo "Name of file to create using alias command:"
+read filename
+alias createfile="touch"
+createfile "$filename"
+
+#OUTPUT
+
+#anagha@anagha-VirtualBox:~/Desktop/shell$ bash -i m.sh
+#Name of directory to create using alias command:
+#dirname
+#Name of file to create using alias command:
+#filename
