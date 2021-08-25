@@ -17,3 +17,19 @@ fi
 #swathi@swathi-VirtualBox:~/Desktop/Exercise_4$ bash 4a.sh
 #10 is less than 20
 
+
+
+
+
+n)#shell script to locate username.
+
+#!/bin/bash
+u="$USER"
+echo "User name : $u"
+
+#OUTPUT
+
+#anagha@anagha-VirtualBox:~/Desktop/shell$ bash n.sh
+#User name : anagha
+
+
